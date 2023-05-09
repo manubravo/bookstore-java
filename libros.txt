@@ -1,0 +1,10 @@
+DFG, blablablabla, false, 2, 100
+XFG, blablablabla, false, 1, 101
+TFG, blablablabla, false, 1, 102
+ZFG, blablablabla, false, 3, 103
+ABG, blablablabla, false, 3, 104
+BFG, blablablabla, false, 2, 105
+CFG, blablablabla, false, 2, 106
+AAA, bsjaglñwa, true, 3, 107
+BBB, bsjaglñwa, true, 3, 108
+CCC, bsjaglñwa, true, 3, 109

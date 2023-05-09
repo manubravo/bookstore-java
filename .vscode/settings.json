@@ -1,0 +1,12 @@
+{
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#da620c",
+        "titleBar.activeBackground": "#da620c",
+        "titleBar.activeForeground": "#FFFBF8",
+        "terminal.foreground": "#00ff00"
+    },
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "mysqlconector/mysql-connector-java-5.1.47-bin.jar"
+    ]
+}
