@@ -2,7 +2,7 @@ package test;
 
 import java.sql.SQLException;
 
-import controller.DAOController;
+import controller.BookStore;
 import model.Connect;
 import security.Constant;
 
@@ -12,7 +12,7 @@ public class TestController {
         try {
             System.out.println("Testing controllers...");
             c = new Connect(Constant.USER, Constant.PASSWORD);
-            DAOController dao = new DAOController(c.on());
+            BookStore dao = new BookStore(c.on());
             System.out.println("Total borrowed: " + dao.totalBorrowed());
             System.out.println("Total not borrowed: " + dao.getAllNotBorrowed());
         } catch (Exception e) {

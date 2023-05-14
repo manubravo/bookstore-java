@@ -3,7 +3,7 @@ package test;
 import java.sql.SQLException;
 import java.util.List;
 
-import controller.DAOController;
+import controller.BookStore;
 import controller.Library;
 import model.Connect;
 import model.Book;
@@ -54,7 +54,7 @@ public class TestConnect {
 				System.out.println(itera);
 			}
 			
-			DAOController dao = new DAOController(connect.on());
+			BookStore dao = new BookStore(connect.on());
 //			dao.insertar(libroPrueba);
 //			dao.eliminar(107);
 			Integer totalSi = dao.totalBorrowed(); // FUNCIONA, TENGO SOLO 3 PRESTADOs
