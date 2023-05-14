@@ -11,17 +11,17 @@ import error.BookThrow;
 import model.Book;
 import security.Constant;
 
-public class DAOController {
+public class BookStore {
 	/*
 	 * CRUD only INSERT and UPDATE
 	 * Not is necessary DELETE_ALL or DELETE_ONE
 	 */
 	private Connection connect;
 	private Library activeLibrary;
-	public DAOController() {
+	public BookStore() {
 		this.activeLibrary = null;
 	}
-	public DAOController(Connection connect) {
+	public BookStore(Connection connect) {
 		this.connect = connect;
 	}
 
