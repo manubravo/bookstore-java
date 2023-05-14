@@ -106,18 +106,7 @@ public class Library {
 		Collections.sort(listBorrowed, new CompareTitleDescendently());
 		return listBorrowed;
 	}
-/*	public List<Integer> cuentaLibros(Integer tipoLibro) {
-		List<Integer> listaTipoLibro = new ArrayList<Integer>();
-		for (Libro itera : this.listaLibros) {
-			if (tipoLibro == Constantes.NOVELA) {
-				if (itera.getTipoLibro().compareTo(tipoLibro) == 0) {	
-					this.listaLibros.add(itera);
-				}
-			} else if (tipoLibro == Constantes.RELATOS) {
-			} else if (tipoLibro == Constantes.POESIA) {
-			}
-		}
-	} */
+	
 	public void saveBooks(String nameFile) {
 		System.out.println("Creating seralized file...");
 		try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(nameFile))) {

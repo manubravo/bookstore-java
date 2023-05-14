@@ -25,6 +25,13 @@ public class DAOController {
 		this.connect = connect;
 	}
 
+	public Library activeLibrary() {
+		if (activeLibrary == null) {
+			this.activeLibrary = new Library();
+		}
+		return this.activeLibrary;
+	}
+
 	public void addToDB(Book a) {
 		try (PreparedStatement ps = this.connect.prepareStatement(Constant.BOOK_ADD)) {
 //			5 values
@@ -38,22 +45,6 @@ public class DAOController {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-	}
-
-	public Library activeLibrary() {
-		if (activeLibrary == null) {
-			this.activeLibrary = new Library();
-		}
-		return this.activeLibrary;
-	}
-
-	public void injectSerFileToDB(String nameFile) {
-		List<Book> injection = this.activeLibrary.readBooks(nameFile);
-		System.out.println("Injecting serialized file to DB...");
-		for (Book itera : injection) {
-			this.addToDB(itera);
-		}
-		System.out.println("You have injected the file to the database.");
 	}
 
 	public void deleteBookOfDB(Integer id) {
@@ -100,5 +91,14 @@ public class DAOController {
 			e.printStackTrace();
 		}
 		return listBorrowed.size();
+	}
+	
+	public void injectSerFileToDB(String nameFile) {
+		List<Book> injection = this.activeLibrary.readBooks(nameFile);
+		System.out.println("Injecting serialized file to DB...");
+		for (Book itera : injection) {
+			this.addToDB(itera);
+		}
+		System.out.println("You have injected the file to the database.");
 	}
 }
